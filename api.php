@@ -4,7 +4,7 @@ include_once 'config.php';
 if(isset($_GET['imgloc']) && strlen($_GET['imgloc']) > 0){
 	$imgloc = $_GET['imgloc'];
 	
-	$faceInfo = detectFaceScene($imgloc,'face');
+	//$faceInfo = detectFaceScene($imgloc,'face');
 	//$sceneInfo = detectFaceScene($imgloc,'scene');
 	
 }else{

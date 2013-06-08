@@ -12,9 +12,10 @@ if(isset($_GET['imgloc']) && strlen($_GET['imgloc']) > 0){
 
 function faceAndSceneDetection($imgloc){
 	$url= "http://rekognition.com/func/api/?"
-			."api_key=".REKOGNITION_SECRET_KEY
+			."api_key=".REKOGNITION_API_KEY
 			."&api_secret=".REKOGNITION_SECRET_SCENE
-			."&jobs=scene&urls=".$imgloc;
+			."&jobs=".DETECTION_STRING
+			."&urls=".$imgloc;
 	
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -22,9 +23,9 @@ function faceAndSceneDetection($imgloc){
 	$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	
 	if($httpCode == 200){
-		$geo = json_decode($result);
+		$peopleInfo = json_decode($result);
 		echo '<pre>';
-		print_r($geo);
+		print_r($peopleInfo);
 		echo '</pre>';die;
 		
 	}else

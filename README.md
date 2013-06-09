@@ -1,6 +1,6 @@
 # Visual-Eyes
 
-A web-service that returns a visual description of objects contained in an image.
+A web-service for  vision impaired people that provides meaningful alternative text for images on websites.
 
 Currently we are utilizing cloud based image processing apis from rekognition.com (face and scene detection) and iqengines.com (object recognition)
 

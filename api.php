@@ -103,8 +103,6 @@ function objectQuery($filename) {
 	*/
     
     if ($response[19] == 0) {  
-    	echo "1. returned api_sig as qid <br/>";
-    	
     	return $api_sig;  
     	} else {
     		// We should handle this failure properly so user can retry

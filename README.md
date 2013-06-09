@@ -1,10 +1,14 @@
 # Visual-Eyes
 
-Our vision is to make all images on the internet accessible to blind and partially sighted users. 
+Our vision is to make all images on the internet accessible to blind and partially sighted people. 
 
-We have developed a web-service that provides meaningful alternative descriptions for online images with emphasis on social image sharing applications (Flickr, Facebook etc.). The service can also interface with screen reader, voice over services and embedded within browser extensions. 
+We have developed a web-service that provides meaningful  descriptions for online images, with an emphasis on social image sharing applications (Flickr, Facebook etc.). 
 
-For this prototype, we are utilising cloud based image processing apis from rekognition.com, iqengines.com and mash social data from Facebook.com. Our long term goal is to utilize open source technology and develop the necessary infrastructure and services inhouse. 
+So using this webservice can determine that this photo has a boy and a girl, standing with a dog, on the sea beach with blue sky. Using social data where possbile we can mash up the names, relations and locations of people in the photos.
+
+The service can also interface with screen reader, voice over services and embedded within browser extensions. 
+
+For this prototype, we are utilising cloud based image processing apis from rekognition.com, iqengines.com and mash social data from Facebook.com. Our long term goal is to utilize open source technology and develop the necessary infrastructure and services to provide open apis. We are hosting all the code on Github. 
 
 # Rekognition.com  - Face & scene detection
 Detects and recognizes faces with guesstimations about gender, facial expressions and 

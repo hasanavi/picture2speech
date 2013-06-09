@@ -7,7 +7,10 @@ We have developed a web-service that provides meaningful alternative description
 For this prototype, we are utilising cloud based image processing apis from rekognition.com, iqengines.com and mash social data from Facebook.com. Our long term goal is to utilize open source technology and develop the necessary infrastructure and services inhouse. 
 
 # Rekognition.com  - Face & scene detection
-_TBD_
+Detects and recognizes faces with guesstimations about gender, facial expressions and 
+Recognizes common scenes - Nightlife, Beach, Urban etc.
+
+See a working example at http://rekognition.com/demo/
 
 # IQEngines.com - Object recognition
 

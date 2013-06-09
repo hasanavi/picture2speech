@@ -1,13 +1,13 @@
 # Visual-Eyes
 
-A web-service for  vision impaired people that provides meaningful alternative text for images on websites.
+A web-service for  vision impaired people that provides meaningful alternative descriptions for online images with emphasis on social image sharing (Flickr, Facebook etc.). It can also interface with screen reader and voice over services on devices. Our vision is to make all images on the internet accessible to blind and partially sighted users. 
 
-Currently we are utilizing cloud based image processing apis from rekognition.com (face and scene detection) and iqengines.com (object recognition)
+Currently we are utilising cloud based image processing apis from rekognition.com and iqengines.com.
 
-# Rekognition face & scene detection
+# Rekognition.com  - Face & scene detection
 _TBD_
 
-# IQ Engines object recognition
+# IQEngines.com - Object recognition
 
 *objectQuery()*: 	Send an image to the IQ Engines server, which will extract
 				its visual content
@@ -18,15 +18,6 @@ Returns: Unique query id associated with the input image
 				 that was generated when posting the image initially
 Parameters: Unique image indentifier
 Returns: Currenly plain json response from the server, containing all the useful bits
-
-# Generate the sentence (story) based on picture metadata
-
-*generateStory()*: Request metadata from an image to train into a human readable sentence. Require further training the metadata from the community...  
-
-
-# Transform the sentence into speech
-  
- *using built-in voiceOver function from across mobiles.
 
 ## API endpoints
 We currently use only the following calls:
@@ -48,12 +39,13 @@ docs https://www.iqengines.com/apidocs/apis/result-api.html
 
 
 
-## Additions for config.php
+# Generate the sentence (story) based on picture metadata
 
-    define('IQ_KEY','dc5a9b2a0e234576803410282ea7931d');
-    define ('IQ_SECRET','c0afe3842d004ce6ac5bb9014dd45ea2');
-    define ('QUERYAPI','http://api.iqengines.com/v1.2/query/');
-    define ('RESULTAPI','http://api.iqengines.com/v1.2/result/');
+*generateStory()*: Request metadata from an image to train into a human readable sentence. Require further training the metadata from the community...  
 
 
-*/
+# Transform the sentence into speech
+  
+ We are currently using built-in voiceOver function on mobile and desktop devices.
+
+

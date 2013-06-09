@@ -54,9 +54,22 @@ function detectFaceScene($imgloc,$detection){
 
 */
 
-function objectQuery($filename) {
+function objectQuery($url) {
     date_default_timezone_set('UTC');
-
+	date_default_timezone_set('UTC');
+		//get file content from url
+		define('ALLOWED_FILENAMES', 'jpg|jpeg|gif|png');          
+		define('IMAGE_DIR', '.');       
+		// validate url and get filename
+		if(!preg_match('#^http://.*([^/]+\.('.ALLOWED_FILENAMES.'))$#', $url, $m)) { die('Invalid url given');  }    
+		if(!$filename = file_get_contents($url))  {  echo "Not valid url";   }      
+		if(!$f = fopen(IMAGE_DIR.'/'.time().'.'.$m[2], 'w')) { echo "file not open"; }       
+		if (fwrite($f, $filename) === FALSE) {  
+			echo "file not write";     
+			}    
+		else $filename = time().'.'.$m[2];       
+		fclose($f); 
+	
     $url = "http://api.iqengines.com/v1.2/query/";
     
     $api_key = IQ_KEY;

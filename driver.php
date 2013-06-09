@@ -8,7 +8,7 @@ include_once 'api.php';
 	These calls need to be run with some delay as the server take some time to process 
 	and register results. 
 */
-$imgloc="3.jpg";
+$imgloc="http://rahul.hp.af.cm/target-dog.jpg";
 $img_qid = objectQuery($imgloc);
 echo "1. Server returned this qid: <br/>"; 
 echo $img_qid;

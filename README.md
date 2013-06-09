@@ -1,5 +1,13 @@
-# IQ Engines calling wrapper
+# Visual-Eyes
 
+A web-service that returns a visual description of objects contained in an image.
+
+Currently we are utilizing cloud based image processing apis from rekognition.com (face and scene detection) and iqengines.com (object recognition)
+
+# Rekognition face & scene detection
+_TBD_
+
+# IQ Engines object recognition
 
 *objectQuery()*: 	Send an image to the IQ Engines server, which will extract
 				its visual content 
@@ -33,8 +41,8 @@ docs https://www.iqengines.com/apidocs/apis/result-api.html
      
 ## Additions for config.php
 
-    define('IQKEY','dc5a9b2a0e234576803410282ea7931d');
-    define ('IQSECRET','c0afe3842d004ce6ac5bb9014dd45ea2');
+    define('IQ_KEY','dc5a9b2a0e234576803410282ea7931d');
+    define ('IQ_SECRET','c0afe3842d004ce6ac5bb9014dd45ea2');
     define ('QUERYAPI','http://api.iqengines.com/v1.2/query/');
     define ('RESULTAPI','http://api.iqengines.com/v1.2/result/');
     	    

@@ -3,7 +3,7 @@ include_once 'config.php';
 
 /*
 
-This bit should go in test driver.
+This bit should go in test driver or client side.
 
 if(isset($_GET['imgloc']) && strlen($_GET['imgloc']) > 0){
 	$imgloc = $_GET['imgloc'];
@@ -97,19 +97,10 @@ function objectQuery($filename) {
     curl_setopt($ch, CURLOPT_HEADER, false);  // DO NOT RETURN HTTP HEADERS 
     $response = curl_exec($ch);
 
-	/*
-	
-	Following lines return an array of server response and api_sig. 
-	Now unnecesssary - instead we just test for error and return api_sig.
-	
-    $answer = array(
-    'resp'=> $response,
-    'qid'=> $api_sig);
-    
-    Below is a quick hack which returns api_siq if server replies with error=0.
-	Really - return to this and fix it properly.
-	
-    */
+    /*
+	Below is a quick hack which returns api_siq if server replies with error=0.
+	Really this needs to be fixed properly.
+	*/
     
     if ($response[19] == 0) {  
     	echo "1. returned api_sig as qid <br/>";
@@ -117,7 +108,7 @@ function objectQuery($filename) {
     	return $api_sig;  
     	} else {
     		// We should handle this failure properly so user can retry
-    		echo "Error: Image 	upload failed";
+    		echo "Error: Image 	upload failed <br/>";
     }
   
 }  

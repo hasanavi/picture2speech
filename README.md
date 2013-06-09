@@ -2,9 +2,9 @@
 
 Our vision is to make all images on the internet accessible to blind and partially sighted users. 
 
-We have developed a web-service for  vision impaired people that provides meaningful alternative descriptions for online images with emphasis on social image sharing applications (Flickr, Facebook etc.). The service can also interface with screen reader, voice over services and also work with browser extensions. 
+We have developed a web-service that provides meaningful alternative descriptions for online images with emphasis on social image sharing applications (Flickr, Facebook etc.). The service can also interface with screen reader, voice over services and embedded within browser extensions. 
 
-Currently we are utilising cloud based image processing apis from rekognition.com and iqengines.com.
+For this prototype, we are utilising cloud based image processing apis from rekognition.com, iqengines.com and mash social data from Facebook.com. Our long term goal is to utilize open source technology and develop the necessary infrastructure and services inhouse. 
 
 # Rekognition.com  - Face & scene detection
 _TBD_

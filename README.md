@@ -1,6 +1,8 @@
 # Visual-Eyes
 
-A web-service for  vision impaired people that provides meaningful alternative descriptions for online images with emphasis on social image sharing (Flickr, Facebook etc.). It can also interface with screen reader and voice over services on devices. Our vision is to make all images on the internet accessible to blind and partially sighted users. 
+Our vision is to make all images on the internet accessible to blind and partially sighted users. 
+
+We have developed a web-service for  vision impaired people that provides meaningful alternative descriptions for online images with emphasis on social image sharing applications (Flickr, Facebook etc.). The service can also interface with screen reader, voice over services and also work with browser extensions. 
 
 Currently we are utilising cloud based image processing apis from rekognition.com and iqengines.com.
 

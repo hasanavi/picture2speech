@@ -14,17 +14,19 @@ _TBD_
 Parameters: Input image file name
 Returns: Unique query id associated with the input image
 
-*resultQuery()*: Requests classification information for an image using unique identifier
+*resultQuery()*: Request classification information for an image using unique identifier
 				 that was generated when posting the image initially
 Parameters: Unique image indentifier
 Returns: Currenly plain json response from the server, containing all the useful bits
 
 # Generate the sentence (story) based on picture metadata
-  ......
+
+*generateStory()*: Request metadata from an image to train into a human readable sentence. Require further training the metadata from the community...  
 
 
 # Transform the sentence into speech
-  ......
+  
+ *using built-in voiceOver function from across mobiles.
 
 ## API endpoints
 We currently use only the following calls:

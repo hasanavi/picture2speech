@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> </title>
+
+  <script type='text/javascript' src='/js/lib/mootools-core-1.4.5-nocompat.js'></script>
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+
+
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+  <style type='text/css'>
+
+  </style>
+
+
+
+<script type='text/javascript'>//<![CDATA[
+window.addEvent('load', function() {
+
+});//]]>
+
+</script>
+
+
+</head>
+<body>
+      <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+    <html>
+    <head>
+    <title>Simple use of JSON</title>
+    <script type="text/javascript">
+    //ultimately this will be in a file that you will access so you don't have to update code when the list changes.
+    var sentence_json = '{ "sentences" : [{ "sentence" : "Location, South Africa two people male and female between around mid age walking on the sandy beach with a black shepherd dog period. Smile on boy face looking at the girl and rather moody appearance on girl period.", "difficulty" : "1" },' +
+    '{ "sentence" : "Beautiful Cape town sandy beach in South Africa, male age around 23 and female age around 25  walking with a black shepherd dog period. Male wearing the glass on smiling face and rather moody appreance on girl period.", "difficulty" : "2" },' +
+    '{ "sentence" : "Two people, male and female around mid young age, period. A male wearing glass with smile on face and a female looking rather moody period. A long side with black dog walking on the Cape town beach South Africa period.", "difficulty" : "3" },' +
+    '{ "sentence" : "Beautiful Cape town sandy beach in South Africa, male age around 23 and female age around 25  walking with a black shepherd dog period. Male wearing the glass on smiling face and rather moody appreance on girl period.", "difficulty" : "3" },' +
+    '{ "sentence" : "Two people, male and female around mid young age, period. A male wearing glass with smile on face and a female looking rather moody period. A long side with black dog walking on the Cape town beach period.", "difficulty" : "2" }]}';
+    //this should go through a parser... but for simplest example:
+    var sentence_obj = eval ("(" + sentence_json + ")");
+    function cycle_sentences()
+    {
+        //simple randomizer
+        var rand = Math.floor(Math.random() * sentence_obj.sentences.length);
+        var available_count = sentence_obj.sentences.length;
+        document.getElementById("sentence_index").innerHTML=rand
+        document.getElementById("sentence_count").innerHTML=available_count
+        document.getElementById("sentence").innerHTML=sentence_obj.sentences[rand].sentence
+        document.getElementById("difficulty").innerHTML=sentence_obj.sentences[rand].difficulty
+    };
+
+    </script>
+    </head>
+    <body>
+    <p>
+    <span id="sentence_index"></span> of <span id="sentence_count"></span><br/>
+    Sentence: <span id="sentence"></span><br>
+    </p>
+    <script type="text/javascript">
+    //runs it on page load
+    cycle_sentences();
+    </script>
+    <button onclick="cycle_sentences();">Get a Sentence</button>
+    </body>
+    </html>
+
+</body>
+
+
+</html>
+

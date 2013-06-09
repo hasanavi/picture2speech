@@ -9,7 +9,8 @@ if(isset($_GET['imgloc']) && strlen($_GET['imgloc']) > 0){
 	$imgloc = $_GET['imgloc'];
 	
 	//$faceInfo = detectFaceScene($imgloc,'face');
-	//$sceneInfo = detectFaceScene($imgloc,'scene');
+	$sceneInfo = detectFaceScene($imgloc,'scene');
+	
 	
 }else{
 	echo 'Error: Invalid image location';
@@ -33,10 +34,10 @@ function detectFaceScene($imgloc,$detection){
 	$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	
 	if($httpCode == 200){
-		$peopleInfo = json_decode($result);
-		echo '<pre>';
-		print_r($peopleInfo);
-		echo '</pre>';die;
+		$info = json_decode($result);
+// 		echo '<pre>';
+// 		print_r($info);
+// 		echo '</pre>';die;
 		//write your data to human string here
 		
 	}else

@@ -1,23 +1,6 @@
 <?php
 include_once 'config.php';
 
-/*
-
-This bit should go in test driver or client side.
-
-if(isset($_GET['imgloc']) && strlen($_GET['imgloc']) > 0){
-	$imgloc = $_GET['imgloc'];
-	
-	//$faceInfo = detectFaceScene($imgloc,'face');
-	$sceneInfo = detectFaceScene($imgloc,'scene');
-	
-	
-}else{
-	echo 'Error: Invalid image location';
-}
-*/
-
-
 function detectFaceScene($imgloc,$detection){
 	$url= "http://rekognition.com/func/api/?"
 			."api_key=".REKOGNITION_API_KEY
@@ -35,9 +18,9 @@ function detectFaceScene($imgloc,$detection){
 	
 	if($httpCode == 200){
 		$info = json_decode($result);
-// 		echo '<pre>';
-// 		print_r($info);
-// 		echo '</pre>';die;
+		echo '<pre>';
+		print_r($info);
+		echo '</pre>';die;
 		//write your data to human string here
 		
 	}else

@@ -17,10 +17,8 @@ function detectFaceScene($imgloc,$detection){
 	$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	
 	if($httpCode == 200){
-		$info = json_decode($result);
-		echo '<pre>';
-		print_r($info);
-		echo '</pre>';die;
+		return json_decode($result);
+		
 		//write your data to human string here
 		
 	}else

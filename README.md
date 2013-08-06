@@ -1,5 +1,7 @@
 # Visual-Eyes
 
+## Accessibility Hack 2013 UK 2nd Prize winner
+
 Our vision is to make all images on the internet accessible to blind and partially sighted people. 
 
 We have developed a web-service that provides meaningful  descriptions for online images, with an emphasis on social image sharing applications (Flickr, Facebook etc.). 
